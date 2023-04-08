@@ -1,28 +1,34 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-
-
-import './FormCadastrarMed.css';
+import './FormAtualizarMed.css'
 import InputText from '../InputText';
 import InputDate from '../InputDate';
 import InputSelect from '../InputSelect';
 import AbaIndicacao from '../AbaIndicacao';
 import BotaoDark from '../BotaoDark';
 import BotaoSecondary from '../BotaoSecondary';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
 
 
-
-const FormCadastrarMed = () => {
+function FormAtualizarMed() {
     return (
         <Container fluid="md" className='pt-5'>
 
             <Form className='p-5 m-3 border bg-light'>
 
 
+                <Row className='mb-1'>
+                    <AbaIndicacao label={"Edição de medicamentos"} />
+                </Row>
+
                 <Row className='mb-5'>
-                    <AbaIndicacao label={"Cadastro de medicamentos"} />
+                    <Col sm={8}>
+                        <InputText label={"Nome do medicamento"} placeholder={"Nome, Lote e Data de Validade"} controlId={"inputNomeDataLoteMed"} />
+                    </Col>
+
+                    <hr />
                 </Row>
 
                 <Row className='mb-2'>
@@ -82,17 +88,17 @@ const FormCadastrarMed = () => {
 
                 <Row className='justify-content-center mt-5'>
                     <Col sm={4}>
-                        <BotaoSecondary label={"Cancelar"}/>
+                        <BotaoSecondary label={"Cancelar"} />
                     </Col>
 
                     <Col sm={4}>
-                        <BotaoDark label={"Confirmar"}/>
+                        <BotaoDark label={"Salvar alterações"} />
                     </Col>
 
                 </Row>
             </Form>
         </Container>
-    );
+    )
 }
 
-export default FormCadastrarMed;
+export default FormAtualizarMed;
