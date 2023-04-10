@@ -5,42 +5,28 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const NavBarFU = () => {
   return (
-    <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">Farmácia Universitária</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            
-          </Nav>
+
+          <Nav className="me-auto"/>
 
           <Nav>
-            <NavDropdown title="Medicamentos" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Cadastrar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Atualizar
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Estoque" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Registrar entrada</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Registrar saída</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Doador" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Buscar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Cadastrar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1">Atualizar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Excluir</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Paciente" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Buscar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Cadastrar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1">Atualizar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Excluir</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Item>
+              <Nav.Link href="">Estoque</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="">Doadores</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="">Pacientes</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="">Medicamentos</Nav.Link>
+            </Nav.Item>
           </Nav>
 
         </Navbar.Collapse>
